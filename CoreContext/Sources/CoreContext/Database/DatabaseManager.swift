@@ -8,11 +8,9 @@
 import Foundation
 import SwiftData
 
-public actor DatabaseManager {
-    public static let shared = DatabaseManager()
-    public let container: ModelContainer
+public class DatabaseManager {
     
-    private init() {
+    public static let sharedContainer: ModelContainer = {
         let schema = Schema([
             ContextItem.self
         ])
@@ -24,9 +22,9 @@ public actor DatabaseManager {
         )
         
         do {
-            container = try ModelContainer(for: schema, configurations: [modelConfiguration])
+            return try ModelContainer(for: schema, configurations: [modelConfiguration])
         } catch {
             fatalError("Could not create ModelContainer: \(error)")
         }
-    }
+    }()
 }

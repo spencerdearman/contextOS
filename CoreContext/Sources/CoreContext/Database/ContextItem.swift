@@ -11,14 +11,14 @@ import SwiftData
 @Model
 public final class ContextItem {
     // Core Identity
-    public var id: UUID
-    public var timestamp: Date
+    public var id: UUID = UUID()
+    public var timestamp: Date = Date()
     
     // Display Data
-    public var title: String
-    public var category: String
+    public var title: String = ""
+    public var category: String = ""
     
-    // Associated Data (Optional for scalability)
+    // Associated Data (Optional)
     public var numericValue: Double?
     public var textContent: String?
     

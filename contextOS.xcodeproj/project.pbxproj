@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		4DBFA5FD2F9060C2005AEA5E /* CoreContext in Frameworks */ = {isa = PBXBuildFile; productRef = 4DBFA5FC2F9060C2005AEA5E /* CoreContext */; };
+		4DBFA60E2F906896005AEA5E /* CoreContext in Frameworks */ = {isa = PBXBuildFile; productRef = 4DBFA60D2F906896005AEA5E /* CoreContext */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4DBFA5E72F905F47005AEA5E /* contextOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = contextOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DBFA5FA2F906081005AEA5E /* CoreContext */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = CoreContext; sourceTree = "<group>"; };
+		4DBFA6022F906872005AEA5E /* contextHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = contextHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -34,6 +36,11 @@
 			path = contextOS;
 			sourceTree = "<group>";
 		};
+		4DBFA6032F906872005AEA5E /* contextHub */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = contextHub;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +52,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4DBFA5FF2F906872005AEA5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DBFA60E2F906896005AEA5E /* CoreContext in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -53,6 +68,7 @@
 			children = (
 				4DBFA5FA2F906081005AEA5E /* CoreContext */,
 				4DBFA5E92F905F47005AEA5E /* contextOS */,
+				4DBFA6032F906872005AEA5E /* contextHub */,
 				4DBFA5FB2F9060C2005AEA5E /* Frameworks */,
 				4DBFA5E82F905F47005AEA5E /* Products */,
 			);
@@ -62,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				4DBFA5E72F905F47005AEA5E /* contextOS.app */,
+				4DBFA6022F906872005AEA5E /* contextHub.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,6 +116,29 @@
 			productReference = 4DBFA5E72F905F47005AEA5E /* contextOS.app */;
 			productType = "com.apple.product-type.application";
 		};
+		4DBFA6012F906872005AEA5E /* contextHub */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4DBFA60A2F906873005AEA5E /* Build configuration list for PBXNativeTarget "contextHub" */;
+			buildPhases = (
+				4DBFA5FE2F906872005AEA5E /* Sources */,
+				4DBFA5FF2F906872005AEA5E /* Frameworks */,
+				4DBFA6002F906872005AEA5E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				4DBFA6032F906872005AEA5E /* contextHub */,
+			);
+			name = contextHub;
+			packageProductDependencies = (
+				4DBFA60D2F906896005AEA5E /* CoreContext */,
+			);
+			productName = contextHub;
+			productReference = 4DBFA6022F906872005AEA5E /* contextHub.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -110,6 +150,9 @@
 				LastUpgradeCheck = 2640;
 				TargetAttributes = {
 					4DBFA5E62F905F47005AEA5E = {
+						CreatedOnToolsVersion = 26.4;
+					};
+					4DBFA6012F906872005AEA5E = {
 						CreatedOnToolsVersion = 26.4;
 					};
 				};
@@ -129,6 +172,7 @@
 			projectRoot = "";
 			targets = (
 				4DBFA5E62F905F47005AEA5E /* contextOS */,
+				4DBFA6012F906872005AEA5E /* contextHub */,
 			);
 		};
 /* End PBXProject section */
@@ -141,10 +185,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4DBFA6002F906872005AEA5E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4DBFA5E32F905F47005AEA5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DBFA5FE2F906872005AEA5E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -169,9 +227,11 @@
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = contextOS/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = contextOS;
 				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "ContextOS requires access to your clinical records to safely adjust context predictions based on your active medications or documented conditions.";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "ContextOS requires access to your sleep data to predict your morning readiness.";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "ContextOS writes data to HealthKit to autonomously log the health, fitness, and mindfulness habits you complete via the dashboard.";
+				INFOPLIST_KEY_NSMotionUsageDescription = "ContextOS requires motion data to determine your current physical activity and commute state.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -192,7 +252,7 @@
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
@@ -219,9 +279,11 @@
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = contextOS/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = contextOS;
 				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "ContextOS requires access to your clinical records to safely adjust context predictions based on your active medications or documented conditions.";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "ContextOS requires access to your sleep data to predict your morning readiness.";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "ContextOS writes data to HealthKit to autonomously log the health, fitness, and mindfulness habits you complete via the dashboard.";
+				INFOPLIST_KEY_NSMotionUsageDescription = "ContextOS requires motion data to determine your current physical activity and commute state.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -242,7 +304,7 @@
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
@@ -370,6 +432,76 @@
 			};
 			name = Release;
 		};
+		4DBFA60B2F906873005AEA5E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T64WR5HWCN;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = contextHub;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.spencerdearman.contextHub;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		4DBFA60C2F906873005AEA5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T64WR5HWCN;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = contextHub;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.spencerdearman.contextHub;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -391,10 +523,23 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		4DBFA60A2F906873005AEA5E /* Build configuration list for PBXNativeTarget "contextHub" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DBFA60B2F906873005AEA5E /* Debug */,
+				4DBFA60C2F906873005AEA5E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
 		4DBFA5FC2F9060C2005AEA5E /* CoreContext */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CoreContext;
+		};
+		4DBFA60D2F906896005AEA5E /* CoreContext */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = CoreContext;
 		};

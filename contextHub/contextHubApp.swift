@@ -1,20 +1,17 @@
 //
-//  contextOSApp.swift
-//  contextOS
+//  contextHubApp.swift
+//  contextHub
 //
 //  Created by Spencer Dearman on 4/15/26.
 //
 
 import SwiftUI
-import SwiftData
-import CoreContext
 
 @main
-struct contextOSApp: App {
+struct contextHubApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
         }
-        .modelContainer(DatabaseManager.sharedContainer)
     }
 }
